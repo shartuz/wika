@@ -21237,8 +21237,8 @@
     button.textContent = offline ? 'Look up offline' : 'Translate with MyMemory';
     field.placeholder = offline ? 'Type a word, or several separate words...' : 'Type a sentence or short text...';
     note.textContent = offline
-      ? 'Offline: exact saved phrases first, otherwise individual words only. Alternatives are shown as listed in your JSON. This is not grammatical sentence translation. No data leaves your phone.'
-      : 'Online: only the text you submit is sent to MyMemory. Maximum 500 UTF-8 bytes per request. Requires an internet connection. Online translations may be incorrect.';
+      ? 'Offline: word per word translator only. No sentence translation. Works offline. Translations may be incorrect.'
+      : 'Online: Translator via MyMemory. Sentence translation. Requires internet connection. Translations may be incorrect. Limit 500 characters per request.';
     show(offline ? 'Offline translation ready.' : 'MyMemory online translator ready.', false);
   }
   mode.addEventListener('change', updateMode);
