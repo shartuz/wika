@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Wika Dictionary — English ~ Suomeksi</title>
+<meta name="theme-color" content="#24b36b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Wika Dictionary">
+<link rel="apple-touch-icon" href="icons/wika-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/wika-192.png">
+
+<link rel="stylesheet" href="styles.css">
+
+<!-- PWA manifest -->
+<link rel="manifest" href="manifest.webmanifest">
+
+</head>
+
+<body>
+
+<h1>
+<span class="english">English</span> ~ 
+<span class="finnish">Suomeksi</span>
+</h1>
+
+<input
+id="searchInput"
+type="text"
+placeholder="Type word here to search"
+/>
+
+<button id="translateButton">find</button>
+
+<div id="translationBox"></div>
+
+<h3 class="sectionTitle" id="englishTitle">English notes:</h3>
+<div id="englishNotes" class="box green"></div>
+
+<h3 class="sectionTitle" id="finnishTitle">Finnish notes:</h3>
+<div id="finnishNotes" class="box blue"></div>
+
+<div id="tableBox" class="box orange"></div>
+
+<div id="imageContainer">
+<img id="wordImage">
+</div>
+
+
+<script src="app.js"></script>
+
+<script>
+// Register service worker for offline support
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registered'))
+        .catch(err => console.log('Service Worker failed:', err));
+}
+
+// Enable Enter key search
+document.getElementById("searchInput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // prevents form submit if inside a form
+        searchWord();
+    }
+});
+</script>
+
+<footer id="siteFooter" style="
+    text-align: center; 
+    font-size: 12px; 
+    color: gray; 
+    margin-top: 20px;
+    padding-bottom: 10px;
+">
+    ©Wika by Shartus™ (in development)
+    *type S for help*
+</footer>
+
+<!-- PWA compatibility and translator modules. Original app.js and dictionary files remain unchanged. -->
+<script src="wika-mobile-compat.js"></script>
+<script src="wika-online-translator.js"></script>
+<div id="wika-pwa-status" role="status" aria-live="polite" style="margin:10px auto 18px;max-width:560px;color:#53606b;font:12px Arial,sans-serif;line-height:1.4">Checking offline availability…</div>
+<script src="pwa-status.js"></script>
+</body>
+</html>
