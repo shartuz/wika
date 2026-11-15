@@ -2,7 +2,7 @@
 // Network first (so edits show up immediately), cached copy when offline.
 'use strict';
 
-const CACHE_NAME = 'wika-dictionary-v2';
+const CACHE_NAME = 'wika-dictionary-v3';
 const CORE_FILES = [
   './',
   'index.html',
@@ -14,6 +14,16 @@ const CORE_FILES = [
   'data/finnish_english.json',
   'manifest.json',
   'images/icon.png',
+  'images/anatomy.jpg',
+  'images/antidote.jpg',
+  'images/commontherapeuticlevels.jpg',
+  'images/digestive.jpg',
+  'images/drugswof.jpg',
+  'images/fruits.jpg',
+  'images/isbar.jpg',
+  'images/kitchen.jpg',
+  'images/medsending.jpg',
+  'images/news.jpg',
 ];
 
 self.addEventListener('install', (event) => {

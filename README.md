@@ -63,6 +63,8 @@ Each entry in `assets/web/data/dictionary.json` looks like this:
 - You can format text with `<b>`, `<strike>`, `<red>`, `<green>`, `<blue>`,
   `<purple>` and `<yellow>`.
 - `imageName`: a file in `assets/web/images/`, or `""` for no image.
+  When you add a new picture, also add it to the `CORE_FILES` list in
+  `assets/web/service-worker.js` so the website saves it for offline use.
 
 Run `flutter test` afterwards. It checks that every entry has the right fields
 and that every image exists.
