@@ -95,3 +95,12 @@ translator only uses the word lists in `data/`.
 Upload the contents of `assets/web/` to any static web host. The dictionary
 search and the offline translator work there, and so does "Add to Home screen".
 The online MyMemory translator only works inside the app.
+
+## App ID
+
+- Android (Play Store): `com.shartus.wika_dictionary`
+- iOS (App Store): `com.shartus.wikaDictionary` (Apple does not allow `_`)
+
+## License
+
+[MIT](LICENSE) © 2026 Shartus
