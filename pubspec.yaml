@@ -1,0 +1,26 @@
+name: wika_dictionary
+description: Wika — personal English ~ Finnish dictionary and translator.
+publish_to: none
+version: 1.1.0+2
+
+environment:
+  sdk: '>=3.7.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  webview_flutter: ^4.14.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/web/
+    - assets/web/css/
+    - assets/web/js/
+    - assets/web/data/
+    - assets/web/images/

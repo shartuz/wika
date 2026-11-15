@@ -1,0 +1,17 @@
+{
+  "name": "Wika Dictionary",
+  "short_name": "Wika",
+  "description": "Personal English ~ Finnish dictionary and translator.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#464947",
+  "theme_color": "#464947",
+  "icons": [
+    {
+      "src": "images/icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "title": "English-Finnish offline vocabulary starter",
+  "version": "1.2",
+  "created": "2026-10-28",
+  "encoding": "UTF-8",
+  "format": "JSON objects mapping headword to a list of possible translations",
+  "word_counts": {
+    "english_headwords": 4424,
+    "finnish_headwords": 4529,
+    "english_finnish_translation_pairs": 5345,
+    "finnish_english_translation_pairs": 5385
+  },
+  "offline": true,
+  "source_description": "Vocabulary compiled for this request from general language knowledge; it is not a complete conversion of any internet dictionary.",
+  "quality_notice": "Not professionally reviewed. Translation alternatives are not context ranked. Several entries have multiple meanings. Finnish inflections and Finnish grammar are not generated.",
+  "large_open_dictionaries": [
+    {
+      "name": "KOReader English-Finnish",
+      "headwords_reported_by_publisher": 179652,
+      "url": "https://github.com/DanielGregorini/koreader-dicts/releases/latest/download/en-fi.zip",
+      "license": "CC BY-SA 4.0",
+      "included_in_this_json": false
+    },
+    {
+      "name": "KOReader Finnish-English",
+      "headwords_reported_by_publisher": 254435,
+      "url": "https://github.com/DanielGregorini/koreader-dicts/releases/latest/download/fi-en.zip",
+      "license": "CC BY-SA 4.0",
+      "included_in_this_json": false
+    },
+    {
+      "name": "FreeDict English-Finnish",
+      "headwords_reported_by_publisher": 75586,
+      "url": "https://download.freedict.org/dictionaries/eng-fin/2025.11.23/freedict-eng-fin-2025.11.23.src.tar.xz",
+      "license": "See dictionary-specific source TEI header",
+      "included_in_this_json": false
+    },
+    {
+      "name": "FreeDict Finnish-English",
+      "headwords_reported_by_publisher": 42060,
+      "url": "https://download.freedict.org/dictionaries/fin-eng/2025.11.23/freedict-fin-eng-2025.11.23.src.tar.xz",
+      "license": "See dictionary-specific source TEI header",
+      "included_in_this_json": false
+    }
+  ],
+  "updated": "2026-11-15",
+  "additions": [
+    {
+      "date": "2026-11-15",
+      "description": "174 Finnish personality/character adjectives added by the owner, in both directions. Owner translations are listed first; older different-meaning translations are kept after them."
+    },
+    {
+      "date": "2026-11-15",
+      "description": "1293 rows added by the owner (communication, social media, maths, physics, music, art, emergencies, work, renovation, time, social security, crime and law, money, nature, car repair, cosmetics, animal body parts), in both directions. New translations first; older ones kept unless identical."
+    }
+  ]
+}

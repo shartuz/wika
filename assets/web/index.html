@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#464947">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Wika — personal English ~ Finnish dictionary and translator.">
+  <title>English ~ Suomeksi</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="images/icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+  <script src="js/translator.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>
+      <span class="english">English</span>
+      <span class="tilde">~</span>
+      <span class="finnish">Suomeksi</span>
+    </h1>
+  </header>
+
+  <main>
+    <!-- Dictionary search -->
+    <form id="searchForm" class="search" role="search" autocomplete="off">
+      <label for="searchInput" class="visually-hidden">Search word</label>
+      <div class="search-box">
+        <button id="homeButton" type="button" class="home-button" aria-label="Home" title="Home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9v11h13V9"/><path d="M10 20v-6h4v6"/>
+          </svg>
+        </button>
+        <span class="search-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+          </svg>
+        </span>
+        <input id="searchInput" type="search"
+               placeholder="Type word here and press Enter" enterkeyhint="search"
+               autocapitalize="none" spellcheck="false"
+               role="combobox" aria-autocomplete="list" aria-expanded="false"
+               aria-controls="suggestions">
+        <ul id="suggestions" class="suggestions" role="listbox" hidden></ul>
+      </div>
+    </form>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+    <div id="results" class="results"></div>
+
+    <!-- English <-> Finnish translator -->
+    <section id="translator" class="card translator" aria-labelledby="translatorTitle">
+      <h2 id="translatorTitle">English ↔ Finnish Translator</h2>
+
+      <div class="field-row">
+        <div class="field field-mode">
+          <label for="trMode">Translation mode</label>
+          <!-- Off = offline word lookup, on = online sentence translation -->
+          <button id="trMode" type="button" class="mode-switch" role="switch" aria-checked="false">
+            <span class="mode-switch-text" data-off="offline" data-on="online"></span>
+            <span class="mode-switch-knob" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="field">
+          <label for="trDirection">Translation direction</label>
+          <select id="trDirection">
+            <option value="en-fi">English → Finnish</option>
+            <option value="fi-en">Finnish → English</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="trText">Word or text</label>
+        <textarea id="trText" rows="3" enterkeyhint="search"
+                  placeholder="Type a word, or several separate words..."></textarea>
+      </div>
+
+      <button id="trSend" type="button" class="action-button">search</button>
+
+      <label for="trOutput" class="visually-hidden">Translation result</label>
+      <output id="trOutput" class="translator-result" aria-live="polite">Offline translation ready.</output>
+      <p id="trNote" class="subnote"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    ©Wika by Shartus™ (in development)
+    <span class="hint">*type S for help*</span>
+  </footer>
+
+  <!-- Full-screen image viewer -->
+  <dialog id="imageViewer" class="image-viewer">
+    <form method="dialog">
+      <button class="close-button" aria-label="Close image">×</button>
+    </form>
+    <img id="imageViewerImg" alt="">
+  </dialog>
+
+  <template id="entryTemplate">
+    <article class="entry">
+      <p class="translation"></p>
+      <h3 class="section-title english-title">English notes:</h3>
+      <div class="box notes english-notes"></div>
+      <h3 class="section-title finnish-title">Finnish notes:</h3>
+      <div class="box notes finnish-notes"></div>
+      <div class="box table-box"></div>
+      <figure class="entry-image"><img alt="" loading="lazy"></figure>
+    </article>
+  </template>
+</body>
+</html>

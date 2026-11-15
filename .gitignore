@@ -1,0 +1,32 @@
+# Flutter / Dart build output
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+coverage/
+.widget_preview/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Generated plugin registrants
+**/GeneratedPluginRegistrant.*
+
+# Backups and archives
+*.bak
+*.zip
+
+# Kotlin / Gradle caches
+.kotlin/
+.gradle/
+
+# OS and log files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log

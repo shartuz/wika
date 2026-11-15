@@ -1,0 +1,11 @@
+# Keep line endings consistent between Windows and GitHub.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.jar binary
