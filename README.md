@@ -94,9 +94,13 @@ translator only uses the word lists in `data/`.
 
 ## Hosting as a website
 
-Upload the contents of `assets/web/` to any static web host. The dictionary
-search and the offline translator work there, and so does "Add to Home screen".
-The online MyMemory translator only works inside the app.
+Live site: **https://shartuz.github.io/wika/**
+
+Every `git push` to `main` publishes `assets/web/` to GitHub Pages
+automatically (see `.github/workflows/pages.yml`). Open the site once with
+internet, then use "Add to Home screen". After that the dictionary search and
+the offline translator work without internet. The online MyMemory translator
+only works inside the app.
 
 ## App ID
 
